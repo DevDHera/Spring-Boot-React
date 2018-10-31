@@ -1,5 +1,6 @@
 package com.devin.bhsb.model;
 
+import com.devin.bhsb.model.audit.UserDateAudit;
 import org.hibernate.annotations.BatchSize;
 import org.hibernate.annotations.Fetch;
 import org.hibernate.annotations.FetchMode;
@@ -13,7 +14,7 @@ import java.util.List;
 
 @Entity
 @Table(name = "books")
-public class Book {
+public class Book extends UserDateAudit {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
